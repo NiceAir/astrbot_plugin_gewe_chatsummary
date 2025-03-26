@@ -1,0 +1,14 @@
+{
+  "webchat:FriendMessage:webchat!astrbot!9dab20eb-330d-4723-90cc-a3fc202a8f18": [
+    {
+      "is_private": true,
+      "message": {
+        "sender": "astrbot",
+        "content": [
+          "你好"
+        ],
+        "timestamp": "2025-03-26T19:02:14.724636"
+      }
+    }
+  ]
+}
