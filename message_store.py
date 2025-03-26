@@ -20,16 +20,7 @@ class MessageStore:
         if timestamp is None:
             timestamp = datetime.now().isoformat()
 
-        message = {
-            "is_private": is_private,
-            "message": {
-                "sender": sender,
-                "content": content,
-                "timestamp": timestamp,
-            }
-        }
-
-        # message = f"private_chat:{is_private}, timestamp:{timestamp}, sender:{sender}, content:{content}"
+        message = f"private_chat:{is_private}, timestamp:{timestamp}, sender:{sender}, content:{content}"
 
         # 添加到对应target的列表
         self.data[target].append(message)

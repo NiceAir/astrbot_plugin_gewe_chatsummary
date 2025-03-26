@@ -1,14 +1,20 @@
 {
-  "webchat:FriendMessage:webchat!astrbot!9dab20eb-330d-4723-90cc-a3fc202a8f18": [
-    {
-      "is_private": true,
-      "message": {
-        "sender": "astrbot",
-        "content": [
-          "你好"
-        ],
-        "timestamp": "2025-03-26T19:02:14.724636"
-      }
-    }
+  "webchat:FriendMessage:webchat!astrbot!b4a5aa31-b0c3-4328-bd64-dc8516f208b0": [
+    "private_chat:True, timestamp:2025-03-26T22:24:26.209689, sender:astrbot, content:('你好',)",
+    "private_chat:True, timestamp:2025-03-26T22:26:03.825772, sender:astrbot, content:('我吃饱了',)",
+    "private_chat:True, timestamp:2025-03-26T22:26:38.081058, sender:astrbot, content:('你饿不饿',)",
+    "private_chat:True, timestamp:2025-03-26T22:26:41.836628, sender:astrbot, content:('我今天吃了自助烤肉，把人吃的难受的',)",
+    "private_chat:True, timestamp:2025-03-26T22:26:46.375093, sender:astrbot, content:('烤肉的炉子不太行，半天烤不熟',)",
+    "private_chat:True, timestamp:2025-03-26T22:35:23.245840, sender:astrbot, content:('所以我心情很不好',)",
+    "private_chat:True, timestamp:2025-03-26T22:35:36.440368, sender:astrbot, content:('消息总结 10',)",
+    "private_chat:True, timestamp:2025-03-26T22:36:10.603384, sender:astrbot, content:('总结消息 10',)"
+  ],
+  "default_factory": [],
+  "webchat:FriendMessage:webchat!astrbot!c3d9f7a8-02ce-496e-b65c-3e3a5e0c1651": [
+    "private_chat:True, timestamp:2025-03-26T22:28:49.496284, sender:astrbot, content:('总结消息 10',)",
+    "private_chat:True, timestamp:2025-03-26T22:33:57.466769, sender:astrbot, content:('不开心呢',)"
+  ],
+  "webchat:FriendMessage:webchat!astrbot!95b53eda-5a5b-49c3-9250-535970ff06e9": [
+    "private_chat:True, timestamp:2025-03-26T22:34:34.793357, sender:astrbot, content:('这家店真的不太行',)"
   ]
 }
