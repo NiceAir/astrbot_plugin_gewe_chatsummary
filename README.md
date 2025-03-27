@@ -1,8 +1,15 @@
-# helloworld
+# gewe_chatsummary
 
-AstrBot 插件模板
+微信版消息总结插件
 
-A template plugin for AstrBot plugin feature
+发送以下指令可让机器人对最近的群聊或者私聊进行消息总结
+
+```shell
+/消息总结 10
+/总结消息 10
+```
+
+只有管理员能够触发
 
 # 支持
 
