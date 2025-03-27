@@ -1,20 +1,30 @@
 {
-  "webchat:FriendMessage:webchat!astrbot!b4a5aa31-b0c3-4328-bd64-dc8516f208b0": [
-    "private_chat:True, timestamp:2025-03-26T22:24:26.209689, sender:astrbot, content:('你好',)",
-    "private_chat:True, timestamp:2025-03-26T22:26:03.825772, sender:astrbot, content:('我吃饱了',)",
-    "private_chat:True, timestamp:2025-03-26T22:26:38.081058, sender:astrbot, content:('你饿不饿',)",
-    "private_chat:True, timestamp:2025-03-26T22:26:41.836628, sender:astrbot, content:('我今天吃了自助烤肉，把人吃的难受的',)",
-    "private_chat:True, timestamp:2025-03-26T22:26:46.375093, sender:astrbot, content:('烤肉的炉子不太行，半天烤不熟',)",
-    "private_chat:True, timestamp:2025-03-26T22:35:23.245840, sender:astrbot, content:('所以我心情很不好',)",
-    "private_chat:True, timestamp:2025-03-26T22:35:36.440368, sender:astrbot, content:('消息总结 10',)",
-    "private_chat:True, timestamp:2025-03-26T22:36:10.603384, sender:astrbot, content:('总结消息 10',)"
+  "wxid_qmy0i8rjurtx22": [
+    "private_chat:True, timestamp:2025-03-27T09:11:58.040355, sender:unknown, content:('你好',)",
+    "private_chat:True, timestamp:2025-03-27T09:32:45.664575, sender:unknown, content:('你好',)",
+    "private_chat:True, timestamp:2025-03-27T09:34:43.581103, sender:unknown, content:('你好啊',)",
+    "private_chat:True, timestamp:2025-03-27T10:19:39.111939, sender:unknown, content:你好",
+    "private_chat:True, timestamp:2025-03-27T10:21:53.078525, sender:unknown, content:消息总结 20",
+    "private_chat:True, timestamp:2025-03-27T10:32:40.731315, sender:wxid_qmy0i8rjurtx22, content:你好",
+    "private_chat:True, timestamp:2025-03-27T10:34:22.441201, sender:wxid_qmy0i8rjurtx22, content:你好",
+    "private_chat:True, timestamp:2025-03-27T10:35:54.727341, sender:wxid_qmy0i8rjurtx22, content:今天天气不错哦",
+    "private_chat:True, timestamp:2025-03-27T10:36:00.097675, sender:wxid_qmy0i8rjurtx22, content:就是有点冷",
+    "private_chat:True, timestamp:2025-03-27T10:40:12.410586, sender:wxid_qmy0i8rjurtx22, content:你好",
+    "private_chat:True, timestamp:2025-03-27T10:42:39.495843, sender:wxid_qmy0i8rjurtx22, content:你好"
   ],
-  "default_factory": [],
-  "webchat:FriendMessage:webchat!astrbot!c3d9f7a8-02ce-496e-b65c-3e3a5e0c1651": [
-    "private_chat:True, timestamp:2025-03-26T22:28:49.496284, sender:astrbot, content:('总结消息 10',)",
-    "private_chat:True, timestamp:2025-03-26T22:33:57.466769, sender:astrbot, content:('不开心呢',)"
+  "fmessage": [
+    "private_chat:True, timestamp:2025-03-27T09:17:17.304087, sender:unknown, content:('',)"
   ],
-  "webchat:FriendMessage:webchat!astrbot!95b53eda-5a5b-49c3-9250-535970ff06e9": [
-    "private_chat:True, timestamp:2025-03-26T22:34:34.793357, sender:astrbot, content:('这家店真的不太行',)"
+  "53765034182@chatroom": [
+    "private_chat:False, timestamp:2025-03-27T09:17:37.557586, sender:L, content:('你好',)",
+    "private_chat:False, timestamp:2025-03-27T09:17:44.564171, sender:L, content:('几点了？',)",
+    "private_chat:False, timestamp:2025-03-27T09:17:54.018920, sender:L, content:('@_  现在几点了',)",
+    "private_chat:False, timestamp:2025-03-27T09:18:45.430169, sender:L, content:('今天早上北京天气咋样',)",
+    "private_chat:False, timestamp:2025-03-27T09:18:50.133528, sender:L, content:('昨天热的很，今天咋有点冷',)",
+    "private_chat:False, timestamp:2025-03-27T09:19:35.780521, sender:L, content:('消息总结 20',)"
+  ],
+  "wxid_xvl5oo57rifj12": [
+    "private_chat:True, timestamp:2025-03-27T09:19:44.734333, sender:unknown, content:('八格牙路',)",
+    "private_chat:True, timestamp:2025-03-27T09:19:48.605188, sender:unknown, content:('',)"
   ]
 }

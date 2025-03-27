@@ -54,13 +54,14 @@ class MessageStore:
         try:
             with open(self.filename, 'r') as f:
                 loaded_data = json.load(f)
+
+            # 转换为defaultdict
+            self.data = defaultdict(list, loaded_data)
+
+            # 确保每个target不超过最大数量
+            for target in self.data:
+                self.data[target] = self.data[target][-self.max_per_target:]
+                
         except Exception as e:
             logger.error(f"_load_from_file, err:{e}")
             return
-
-            # 转换为defaultdict
-        self.data = defaultdict(list, loaded_data)
-
-        # 确保每个target不超过最大数量
-        for target in self.data:
-            self.data[target] = self.data[target][-self.max_per_target:]

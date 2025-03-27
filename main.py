@@ -33,7 +33,12 @@ class MyPlugin(Star):
             event.stop_event()
             return
 
-        massage_lines = self.message_store.get_messages(event.unified_msg_origin, count)
+        target = event.get_group_id() if event.get_group_id() != "" else event.get_sender_id()
+        massage_lines = self.message_store.get_messages(target, count)
+        if len(massage_lines) <= 0:
+            yield event.plain_result("没有可总结的消息")
+            event.stop_event()
+            return
 
         msg = "\n".join(massage_lines)
 
@@ -48,19 +53,24 @@ class MyPlugin(Star):
         # 输出LLM最终总结内容，发送总结消息
         yield event.plain_result(llm_response.completion_text)
 
+    @filter.command("消息总结")
+    async def summary_v2(self, event: AstrMessageEvent, count: int = None):
+        async for result in self.summary(event, count):
+            yield result
+
     @event_message_type(EventMessageType.ALL, priority=3)
     async def on_all_message(self, event: AstrMessageEvent):
-        content = event.message_str,
-        sender = event.get_sender_name() if event.get_sender_name() != "" else event.get_sender_id()
-        msg_type = event.get_message_type()
-        target = event.unified_msg_origin
+        sender = event.get_sender_name() if event.get_group_id() != "" else event.get_sender_id()
+        target = event.get_group_id() if event.get_group_id() != "" else event.get_sender_id()
         is_private = event.get_group_id() == ""
+        content = event.message_obj.message_str
+        msg_type = event.message_obj.raw_message.get('MsgType', 0)
 
         messages = event.get_messages()
         message = None
         if len(messages) != 0:
             message = messages[0]
-        if msg_type == 1 and content.startswith("总结消息"):
+        if msg_type == 1 and (content.startswith("总结消息") or content.startswith("消息总结")):
             return
         if msg_type == 49 and message is not None:  # 很多，其中就有引用
             if isinstance(message, Reply):
