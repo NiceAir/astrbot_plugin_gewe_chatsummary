@@ -2,10 +2,8 @@ from astrbot.api.event import filter, AstrMessageEvent, MessageEventResult
 from astrbot.api.star import Context, Star, register
 from astrbot.api.all import event_message_type, EventMessageType
 from astrbot.api.message_components import *
-from astrbot.api import logger
-from astrbot.api.event.filter import permission_type, PermissionType
-import os, json, datetime, time
-
+import os
+import json
 from data.plugins.astrbot_plugin_gewe_chatsummary.message_store import MessageStore
 
 
@@ -17,7 +15,7 @@ def with_project_path(file: str) -> str:
 class MyPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
-        self.message_store = MessageStore(filename=with_project_path("message_store.json"))
+        self.message_store = MessageStore(filename=with_project_path("message_store.data"))
 
     @filter.command("总结消息")
     async def summary(self, event: AstrMessageEvent, count: int = None):
@@ -60,6 +58,9 @@ class MyPlugin(Star):
 
     @event_message_type(EventMessageType.ALL, priority=3)
     async def on_all_message(self, event: AstrMessageEvent):
+        if event.get_platform_name() != "gewechat":
+            return
+
         sender = event.get_sender_name() if event.get_group_id() != "" else event.get_sender_id()
         target = event.get_group_id() if event.get_group_id() != "" else event.get_sender_id()
         is_private = event.get_group_id() == ""
