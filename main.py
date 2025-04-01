@@ -60,6 +60,8 @@ class MyPlugin(Star):
     async def on_all_message(self, event: AstrMessageEvent):
         if event.get_platform_name() != "gewechat":
             return
+        if event.get_self_id() == event.get_sender_id():
+            return
 
         sender = event.get_sender_name() if event.get_group_id() != "" else event.get_sender_id()
         target = event.get_group_id() if event.get_group_id() != "" else event.get_sender_id()
