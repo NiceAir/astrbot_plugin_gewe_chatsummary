@@ -79,6 +79,9 @@ class MyPlugin(Star):
             if isinstance(message, Reply):
                 content = message.message_str
 
+        if len(content) == 0:
+            return
+
         self.message_store.add_message(target, is_private, sender, content)
 
     def load_prompt(self):
