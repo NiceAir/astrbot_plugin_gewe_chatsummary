@@ -4,6 +4,7 @@ from astrbot.api.all import event_message_type, EventMessageType
 from astrbot.api.message_components import *
 import os
 import json
+from astrbot.api import logger
 from data.plugins.astrbot_plugin_gewe_chatsummary.message_store import MessageStore
 
 
@@ -38,6 +39,7 @@ class MyPlugin(Star):
             event.stop_event()
             return
 
+        logger.info(f"消息总结 target:{target}, count:{count}， sender:{event.get_sender_id()}")
         msg = "\n".join(massage_lines)
 
         # 调用LLM生成总结内容
