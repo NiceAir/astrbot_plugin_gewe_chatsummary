@@ -76,6 +76,7 @@ class MyPlugin(Star):
         if len(messages) != 0:
             message = messages[0]
         if msg_type == 1 and (content.startswith("总结消息") or content.startswith("消息总结")):
+            event.should_call_llm(True)
             return
         if msg_type == 49 and message is not None:  # 很多，其中就有引用
             if isinstance(message, Reply):
