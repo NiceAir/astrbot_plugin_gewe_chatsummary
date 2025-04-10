@@ -19,11 +19,14 @@ class MyPlugin(Star):
         self.message_store = MessageStore(filename=with_project_path("message_store.data"))
 
     @filter.command("总结消息")
+    @event_message_type(EventMessageType.ALL, priority=3)
     async def summary(self, event: AstrMessageEvent, count: int = None):
         """触发消息总结，命令加空格，后面跟获取聊天记录的数量即可（例如“ /消息总结 20 ”）"""
         if not event.is_admin():
             event.stop_event()
             return
+        event.should_call_llm(True)
+        logger.info(f"开始消息总结  count:{count}， sender:{event.get_sender_id()}")
 
         # 检查是否传入了要总结的聊天记录数量，未传入则返回错误，并终止事件传播
         if count is None:
@@ -54,6 +57,7 @@ class MyPlugin(Star):
         yield event.plain_result(llm_response.completion_text)
 
     @filter.command("消息总结")
+    @event_message_type(EventMessageType.ALL, priority=3)
     async def summary_v2(self, event: AstrMessageEvent, count: int = None):
         async for result in self.summary(event, count):
             yield result
