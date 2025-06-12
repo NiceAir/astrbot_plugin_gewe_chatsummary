@@ -64,12 +64,14 @@ class MyPlugin(Star):
     async def on_all_message(self, event: AstrMessageEvent):
         if event.get_self_id() == event.get_sender_id():
             return
+        if event.get_platform_name() != "wechatpadpro":
+            return 
 
         sender = event.get_sender_name() if event.get_group_id() != "" else event.get_sender_id()
         target = event.get_group_id() if event.get_group_id() != "" else event.get_sender_id()
         is_private = event.get_group_id() == ""
         content = event.message_obj.message_str
-        msg_type = event.message_obj.raw_message.get('MsgType', 0)
+        msg_type = event.message_obj.raw_message.get('msg_type', 0)
 
         messages = event.get_messages()
         message = None
