@@ -82,7 +82,7 @@ class MyPlugin(Star):
             return
         if msg_type == 49 and message is not None:  # 很多，其中就有引用
             if isinstance(message, Reply):
-                content = message.message_str
+                content = message.message_str + "\n" + event.message_obj.message_str
 
         if len(content) == 0:
             return
