@@ -21,9 +21,9 @@ class MyPlugin(Star):
     @filter.command("总结消息", priority=3)
     async def summary(self, event: AstrMessageEvent, count: int = None):
         """触发消息总结，命令加空格，后面跟获取聊天记录的数量即可（例如“ /消息总结 20 ”）"""
-        if not event.is_admin():
-            event.stop_event()
-            return
+        # if not event.is_admin():
+        #     event.stop_event()
+        #     return
         event.should_call_llm(True)
         logger.info(f"开始消息总结  count:{count}， sender:{event.get_sender_id()}")
 
